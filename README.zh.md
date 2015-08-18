@@ -9,7 +9,7 @@ ES6 的新特性包括：
 - [箭头函数](#箭头函数)
 - [类](#类)
 - [增强的字面量对象](#增强的字面量对象)
-- [template strings](#template-strings)
+- [模板字符串](#模板字符串)
 - [destructuring](#destructuring)
 - [default + rest + spread](#default--rest--spread)
 - [let + const](#let--const)
@@ -104,27 +104,27 @@ var obj = {
 };
 ```
 
-### Template Strings
-Template strings provide syntactic sugar for constructing strings.  This is similar to string interpolation features in Perl, Python and more.  Optionally, a tag can be added to allow the string construction to be customized, avoiding injection attacks or constructing higher level data structures from string contents.
+### 模板字符串
+模板字符串提供了创建字符串的语法糖，类似 Perl、Python 等语言中的字符串特性。此外还可以给模板字符串添加“标签”以控制字符串的创建，防止注入攻击或者根据字符串内容做更复杂的转换等（译注：可以把模板字符串的“标签”看成是一个函数调用）。
 
 ```JavaScript
-// Basic literal string creation
+// 模板字符串字面量
 `In JavaScript '\n' is a line-feed.`
 
-// Multiline strings
+// 多行字符串
 `In JavaScript this is
  not legal.`
 
-// String interpolation
+// 字符串插值
 var name = "Bob", time = "today";
 `Hello ${name}, how are you ${time}?`
 
-// Construct an HTTP request prefix is used to interpret the replacements and construction
-GET`http://foo.org/bar?a=${a}&b=${b}
-    Content-Type: application/json
-    X-Credentials: ${credentials}
-    { "foo": ${foo},
-      "bar": ${bar}}`(myOnReadyStateChangeHandler);
+// 标签模板字符串
+function tag(strings, n, t){
+  return `[${t}] meet with ${n}`
+}
+tag`Hello ${name}, how are you ${time}?`
+// [today] meet with Bob
 ```
 
 ### Destructuring
