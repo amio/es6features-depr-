@@ -8,7 +8,7 @@ ES6 的新特性包括：
 - [类](#类)
 - [增强的字面量对象](#增强的字面量对象)
 - [模板字符串](#模板字符串)
-- [destructuring](#destructuring)
+- [解构](#解构)
 - [default + rest + spread](#default--rest--spread)
 - [let + const](#let--const)
 - [iterators + for..of](#iterators--forof)
@@ -123,32 +123,32 @@ tag`Hello ${name}, how are you ${time}?`
 // [today] met Bob
 ```
 
-### Destructuring
-Destructuring allows binding using pattern matching, with support for matching arrays and objects.  Destructuring is fail-soft, similar to standard object lookup `foo["bar"]`, producing `undefined` values when not found.
+### 解构
+使用数组或对象的模式进行匹配赋值，这种操作称为解构。解构赋值允许空匹配，就像传统的对象属性访问 `foo["bar"]`，属性不存在的话会得到 `undefined` 而非报错。
 
 ```JavaScript
-// list matching
+// 数组匹配
 var [a, , b] = [1,2,3];
 
-// object matching
+// 对象匹配
 var { op: a, lhs: { op: b }, rhs: c }
        = getASTNode()
 
-// object matching shorthand
-// binds `op`, `lhs` and `rhs` in scope
+// 对相匹配的简写
+// 绑定作用域中的 `op`, `lhs` 和 `rhs`
 var {op, lhs, rhs} = getASTNode()
 
-// Can be used in parameter position
+// 用于参数赋值
 function g({name: x}) {
   console.log(x);
 }
 g({name: 5})
 
-// Fail-soft destructuring
+// 空值解构
 var [a] = [];
 a === undefined;
 
-// Fail-soft destructuring with defaults
+// 有默认值的空值解构
 var [a = 1] = [];
 a === 1;
 ```
