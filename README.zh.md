@@ -6,8 +6,6 @@
 - 主流 JS 引擎仍在逐步实现这些特性，目前的进展课参见 [ES6 特性兼容表](http://kangax.github.io/es5-compat-table/es6/)
 - 完整的 ES6 规范参见 [ES6 standard](http://www.ecma-international.org/ecma-262/6.0/)
 
-See the  for full specification of the ECMAScript 6 language.
-
 ES6 的新特性包括：
 - [箭头函数](#箭头函数)
 - [类](#类)
@@ -30,8 +28,6 @@ ES6 的新特性包括：
 - [binary and octal literals](#binary-and-octal-literals)
 - [reflect api](#reflect-api)
 - [tail calls](#tail-calls)
-
-## ECMAScript 6 Features
 
 ### 箭头函数
 箭头函数即 `=>` 语法，类似 C#、Java 8 和 CoffeeScript 中的箭头函数，可以用代码块或表达式（表达式的值即为返回值）作为函数体。与常规函数不同的是，箭头函数和它所在的上下文共享同一个词法作用域的 `this`。
