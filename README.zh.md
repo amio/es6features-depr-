@@ -57,7 +57,7 @@ var bob = {
 ```
 
 ### Classes
-ES6 classes are a simple sugar over the prototype-based OO pattern.  Having a single convenient declarative form makes class patterns easier to use, and encourages interoperability.  Classes support prototype-based inheritance, super calls, instance and static methods and constructors.
+ES6 的 Class 语法是基于原型继承的语法糖，提供了更简洁易用的声明结构。新的语法支持原型继承、父类调用、定义实例和静态方法以及构造函数。
 
 ```JavaScript
 class SkinnedMesh extends THREE.Mesh {
