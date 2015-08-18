@@ -1,4 +1,4 @@
-# ECMAScript 6 特性一览
+# ECMAScript 6 特性一览 ([git.io/es6cn](http://git.io/es6cn))
 
 ## 简介
 最新的 ECMAScript 标准 ES6 又名 ES2015，为语言添加了大量新特性，可谓自 2009 年以来的最大更新。本文旨在提供一份 ~~速成~~ 速查手册，方便 ~~十分钟入门~~ 案头参考。全面详细的语法学习，建议阅读 InfoQ 的系列文章 [深入浅出 ES6](http://www.infoq.com/cn/es6-in-depth/)；完整的 ES6 规范参见 [ES6 standard](http://www.ecma-international.org/ecma-262/6.0/)；主流 JS 引擎仍在逐步实现这些特性，目前的兼容情况可参见 [ES6 特性兼容表](http://kangax.github.io/es5-compat-table/es6/)。
