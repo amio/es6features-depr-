@@ -1,9 +1,12 @@
-# ECMAScript 6 速查
+# ECMAScript 6 特性一览
 
-## Introduction
-ECMAScript 6, also known as ECMAScript 2015, is the latest version of the ECMAScript standard.  ES6 is a significant update to the language, and the first update to the language since ES5 was standardized in 2009. Implementation of these features in major JavaScript engines is [underway now](http://kangax.github.io/es5-compat-table/es6/).
+## 简介
+最新的 ECMAScript 标准 ECMAScript 6 又名 ECMAScript 2015，为语言添加了大量新特性，可谓自 2009 年以来的最大更新。 本文旨在提供一份 ~~速成~~ 速查手册，方便 ~~十分钟入门~~ 案头参考。
 
-See the [ES6 standard](http://www.ecma-international.org/ecma-262/6.0/) for full specification of the ECMAScript 6 language.
+- 主流 JS 引擎仍在逐步实现这些特性，目前的进展课参见 [ES6 特性兼容表](http://kangax.github.io/es5-compat-table/es6/)
+- 完整的 ES6 规范参见 [ES6 standard](http://www.ecma-international.org/ecma-262/6.0/)
+
+See the  for full specification of the ECMAScript 6 language.
 
 ES6 的新特性包括：
 - [箭头函数](#箭头函数)
