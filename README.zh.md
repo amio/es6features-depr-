@@ -6,9 +6,9 @@ ECMAScript 6, also known as ECMAScript 2015, is the latest version of the ECMASc
 See the [ES6 standard](http://www.ecma-international.org/ecma-262/6.0/) for full specification of the ECMAScript 6 language.
 
 ES6 的新特性包括：
-- [arrows](#arrows)
-- [classes](#classes)
-- [enhanced object literals](#enhanced-object-literals)
+- [箭头函数](#箭头函数)
+- [类](#类)
+- [增强的字面量对象](#增强的字面量对象)
 - [template strings](#template-strings)
 - [destructuring](#destructuring)
 - [default + rest + spread](#default--rest--spread)
@@ -30,7 +30,7 @@ ES6 的新特性包括：
 
 ## ECMAScript 6 Features
 
-### Arrows
+### 箭头函数
 箭头函数即 `=>` 语法，类似 C#、Java 8 和 CoffeeScript 中的箭头函数，可以用代码块或表达式（表达式的值即为返回值）作为函数体。与常规函数不同的是，箭头函数和它所在的上下文共享同一个词法作用域的 `this`。
 
 ```JavaScript
@@ -56,8 +56,8 @@ var bob = {
 }
 ```
 
-### Classes
-ES6 的 Class 语法是基于原型继承的语法糖，提供了更简洁易用的声明结构。新的语法支持原型继承、父类调用、定义实例和静态方法以及构造函数。
+### 类
+ES6 的类本质上是原型继承的语法糖，提供了更简洁易用的声明结构。新的语法支持原型继承、父类调用、定义实例和静态方法以及构造函数。
 
 ```JavaScript
 class SkinnedMesh extends THREE.Mesh {
@@ -85,21 +85,21 @@ class SkinnedMesh extends THREE.Mesh {
 }
 ```
 
-### Enhanced Object Literals
-Object literals are extended to support setting the prototype at construction, shorthand for `foo: foo` assignments, defining methods, making super calls, and computing property names with expressions.  Together, these also bring object literals and class declarations closer together, and let object-based design benefit from some of the same conveniences.
+### 增强的字面量对象
+对象的字面量可以直接配置原型对象，简写 `foo: foo`，定义方法，调用父类方法，以及计算属性名。这些新特性融合了字面量对象和类的声明，使基于类的开发方便很多。
 
 ```JavaScript
 var obj = {
-    // __proto__
+    // 配置原型
     __proto__: theProtoObj,
-    // Shorthand for ‘handler: handler’
+    // 简写 ‘handler: handler’
     handler,
-    // Methods
+    // 定义方法
     toString() {
-     // Super calls
-     return "d " + super.toString();
+      // 调用父类方法
+      return "d " + super.toString();
     },
-    // Computed (dynamic) property names
+    // 计算（动态）属性名
     [ 'prop_' + (() => 42)() ]: 42
 };
 ```
