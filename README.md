@@ -9,7 +9,7 @@ ES6 的新特性包括：
 - [增强的字面量对象](#增强的字面量对象)
 - [模板字符串](#模板字符串)
 - [解构](#解构)
-- [default + rest + spread](#default--rest--spread)
+- [增强的函数参数](#增强的函数参数)
 - [let + const](#let--const)
 - [iterators + for..of](#iterators--forof)
 - [generators](#generators)
@@ -153,19 +153,19 @@ var [a = 1] = [];
 a === 1;
 ```
 
-### Default + Rest + Spread
-Callee-evaluated default parameter values.  Turn an array into consecutive arguments in a function call.  Bind trailing parameters to an array.  Rest replaces the need for `arguments` and addresses common cases more directly.
+### 增强的函数参数
+函数可以设定参数的默认值；接受传入整个数组而将元素解析为连续参数；增加了尾调用优化；而不定参数则可以替代 `arguments` 的应用场景。
 
 ```JavaScript
 function f(x, y=12) {
-  // y is 12 if not passed (or passed as undefined)
+  // 忽略第二个参数或者传入 undefined 的话，y 的值会是 12
   return x + y;
 }
 f(3) == 15
 ```
 ```JavaScript
 function f(x, ...y) {
-  // y is an Array
+  // y 是一个数组
   return x * y.length;
 }
 f(3, "hello", true) == 6
@@ -174,7 +174,7 @@ f(3, "hello", true) == 6
 function f(x, y, z) {
   return x + y + z;
 }
-// Pass each elem of array as argument
+// 讲数组中的元素作为参数传递
 f(...[1,2,3]) == 6
 ```
 
